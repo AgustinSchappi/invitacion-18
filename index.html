@@ -37,11 +37,22 @@ background-size:77px 77px,131px 131px;background-position:0 0,27px 42px;opacity:
 .detail{padding:12px;border-right:1px solid rgba(215,169,56,.55)}.detail:last-child{border:0}
 .icon{font-size:2rem;color:var(--gold2);margin-bottom:8px}.big{font-family:"Cormorant Garamond",serif;font-size:3rem}.gold{color:var(--gold2)}
 .smallscript{font-family:"Great Vibes";font-size:2rem;color:var(--gold2)}
-.location{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+.location{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
 h2{font-family:"Cormorant Garamond",serif;font-size:2rem;letter-spacing:.12em;margin:0 0 12px;color:var(--gold2)}
 .address{font-family:"Cormorant Garamond",serif;font-size:1.35rem;line-height:1.6;letter-spacing:.06em}
-.map{height:230px;border-radius:22px;border:1px solid rgba(215,169,56,.8);background:linear-gradient(135deg,rgba(215,169,56,.2),rgba(255,255,255,.05)),url("diseno-referencia.png") center 68%/cover;display:grid;place-items:center;overflow:hidden}
-.map-pin{font-size:3.5rem;filter:drop-shadow(0 0 14px #000)}
+.map{
+  width:100%;
+  height:260px;
+  border-radius:22px;
+  border:1px solid rgba(215,169,56,.8);
+  background:url("ubicacion.png") center/cover;
+  overflow:hidden;
+  box-shadow:0 0 25px rgba(215,169,56,.15);
+}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .btn{border:1px solid var(--gold);background:linear-gradient(145deg,rgba(35,29,15,.95),rgba(8,8,7,.98));color:white;border-radius:22px;min-height:110px;padding:16px;text-decoration:none;display:flex;align-items:center;gap:12px;justify-content:center;box-shadow:0 0 20px rgba(215,169,56,.14);transition:.25s transform,.25s box-shadow}
 .btn:hover,.btn:active{transform:translateY(-4px) scale(1.01);box-shadow:0 0 28px rgba(255,207,82,.38)}
@@ -85,14 +96,24 @@ h2{font-family:"Cormorant Garamond",serif;font-size:2rem;letter-spacing:.12em;ma
 </section>
 
 <section class="section reveal">
-<div class="location">
-<div>
-<h2>¿DÓNDE?</h2>
-<div class="address">JUAN JOSÉ CASTELLI 830<br><span class="gold">CRUCECITA, AVELLANEDA</span></div>
-<p class="note">📍 Juan José Castelli 830, Crucecita, Avellaneda.</p>
-</div>
-<div class="map"><div class="map-pin">📍</div></div>
-</div>
+  <div class="location">
+
+    <div class="map"></div>
+
+    <div class="location-info">
+      <h2>¿DÓNDE?</h2>
+
+      <div class="address">
+        JUAN JOSÉ CASTELLI 830<br>
+        <span class="gold">CRUCECITA, AVELLANEDA</span>
+      </div>
+
+      <p class="note">
+        📍 Juan José Castelli 830, Crucecita, Avellaneda.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <section class="actions reveal">
